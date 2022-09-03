@@ -72,6 +72,12 @@ body {
 /* ======================= */
 
 /* ======= Header ======= */
+.header {
+	width: 1600px;
+	margin: 0 auto;
+	border-bottom: 1px solid #ECECEC;
+}
+
 .header-menu {
 	display: flex;
 	align-items: center;
@@ -172,11 +178,7 @@ body {
 	font-style: inherit;
 }
 
-.footer__address-list {
-	
-}
-
-.footer__address-item {
+.footer__address-item:not(:last-child) {
 	margin-bottom: 9px;
 }
 
@@ -206,17 +208,6 @@ body {
 
 	background-color: var(--bg-dark-color);
 }
-
-/* .hero::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 80px;
-	width: 100%;
-	height: 1px;
-
-	background-color: #ECECEC;
-} */
 
 .hero__content {
 	position: absolute;
@@ -281,8 +272,6 @@ body {
 
 	color: var(--secondary-color);
 }
-
-.peculiarities__list-text {}
 /* ==================================== */
 
 /* ============ Work ============= */
@@ -310,8 +299,6 @@ body {
 .work__items:not(:last-child) {
 	margin-right: 30px;
 }
-
-.work__item {}
 /* ============================== */
 
 /* ============ Team ============ */
@@ -348,9 +335,6 @@ body {
 	border-radius: 0px 0px 4px 4px;
 }
 
-.team__item-img {
-}
-
 .team__item-description {
 	padding: 30px 0 30px 0;
 }
@@ -373,15 +357,13 @@ body {
 /* ============================== */
 
 /* =========== Portfolio =========== */
-.portfolio__container {}
-
-.portfolio__filter {}
-
 .filter-items {
-	list-style: none;
-}
+	display: flex;
+	justify-content: center;
+	gap: 8px;
 
-.filter-item {}
+	margin-bottom: 50px;
+}
 
 .filter-item-button {
 	min-width: 81px;
@@ -390,9 +372,12 @@ body {
 	font-size: 16px;
 	line-height: 1.625;
 	letter-spacing: 0.03em;
+
+	padding: 6px 22px;
 	color: var(--secondary-color);
 	cursor: pointer;
 	background: var(--bg-button);
+	border-radius: 4px;
 	border: none;
 }
 
@@ -404,12 +389,19 @@ body {
 }
 
 .portfolio__content-cards {
-	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 30px;
 }
 
-.portfolio__content-card {}
+.portfolio__content-card {
+	border-bottom: 1px solid #EEEEEE;
+}
 
-.portfolio__card-img {}
+.portfolio__card-description {
+	padding: 20px 24px;
+}
 
 .portfolio__card-title {
 	font-weight: 700;
